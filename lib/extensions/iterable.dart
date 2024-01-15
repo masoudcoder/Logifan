@@ -19,3 +19,10 @@ extension IterableNumberExtensions on Iterable<double> {
 
   double get max => reduce(math.max);
 }
+
+extension NullableIterableExtensions<E> on Iterable<E>? {
+  /// Map to output or if it is null return empty list
+  List<T> mapOrEmpty<T>(T Function(E element) transform) => this?.map(transform).toList() ?? [];
+
+  bool get isNullOrEmpty => this == null || (this != null && this!.isEmpty);
+}
