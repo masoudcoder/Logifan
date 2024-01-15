@@ -24,7 +24,7 @@ class LoggingInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) async {
+  void onError(DioException err, ErrorInterceptorHandler handler) async {
     logPrint('*** Api Error - Start ***:');
 
     logPrint('URI: ${err.requestOptions.uri}');
@@ -48,7 +48,7 @@ class LoggingInterceptor extends Interceptor {
 
     printKV('URI', response.requestOptions.uri);
     printKV('STATUS CODE', response.statusCode ?? '');
-    printKV('REDIRECT', response.isRedirect ?? false);
+    printKV('REDIRECT', response.isRedirect);
     logPrint('BODY:');
     printAll(response.data ?? "");
 
