@@ -1,7 +1,7 @@
 name: logifan
 description: Logicbase core libraries for flutter
 homepage: https://github.com/masoudcoder/logifan
-version: 0.1.0
+version: 0.1.1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -12,10 +12,10 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  retrofit: ^2.0.1
+  retrofit: ^4.1.0
   intl: ^0.18.1
   device_info: ^2.0.2
-  dio: ^5.4.0
+  dio: ^5.4.3+1
 
 dev_dependencies:
   flutter_test:
