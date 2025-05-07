@@ -1,3 +1,7 @@
+# 0.2.1
+
+- Remove deprecated device_info package
+
 # 0.1.1
 
 - Update some packages
